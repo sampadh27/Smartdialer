@@ -1,0 +1,13 @@
+stateDiagram-v2
+  [*] --> OFFLINE
+  OFFLINE --> AVAILABLE: login
+  AVAILABLE --> RESERVED: atomic claim
+  RESERVED --> DIALING: initiate call
+  DIALING --> CONNECTED: answer on reserved slot
+  DIALING --> AVAILABLE: definitive failure or cancel
+  CONNECTED --> WRAP_UP: call complete
+  WRAP_UP --> AVAILABLE: wrap-up elapsed
+  AVAILABLE --> PAUSED: agent pause
+  PAUSED --> AVAILABLE: resume
+  AVAILABLE --> OFFLINE: logout
+  DIALING --> DIALING: timeout; hold slot and reconcile

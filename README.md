@@ -39,4 +39,4 @@ Provider duplicate events are keyed by event ID. Call states are monotonic and t
 
 This is a functional simulator and design reference, not a telecom dialer. The mock's immediate event delivery abstracts network timing; the scenario simulator separately models setup delay, no-answer/failure, talk time, changing conditions, and pacing. The process-local lock does not provide multi-process durability. Persist state, use database uniqueness/transactions and an outbox, add provider reconciliation webhooks, lease fencing tokens, per-campaign fair queues, rate limits, metrics, and integration tests before handling real borrowers or regulated traffic.
 
-See [architecture.md](architecture.md) and [architecture.mmd](architecture.mmd) for tradeoffs and state diagrams.
+See [architecture.md](architecture.md) for tradeoffs and [diagrams.md](diagrams.md) for three GitHub-ready Mermaid blocks. `architecture.mmd`, `agent_state.mmd`, and `call_state.mmd` are individual raw Mermaid source files; render each separately.
