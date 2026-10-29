@@ -1,0 +1,4 @@
+agents,reservations,elapsed_sec,reservations_per_sec
+100,100,0.000755,132432.8
+1000,1000,0.049411,20238.3
+10000,10000,4.436815,2253.9
